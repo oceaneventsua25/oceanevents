@@ -1,71 +1,150 @@
-<!DOCTYPE html>
-<html lang="en">
+<!--
+Ocean Events — Multi-page Website
+Files included in this single document:
+
+1) index.html        -> Home / Hero / Upcoming Events preview
+2) events.html       -> Full events list with filters and ticket CTA
+3) gallery.html      -> Photo & Video gallery (Instagram-friendly)
+4) about.html        -> About the team / mission / partners
+5) contact.html      -> Contact form + map + booking CTA
+6) assets/style.css  -> Central stylesheet for all pages
+
+How to use:
+- Place this project in a folder and create an "assets" folder next to the HTML files.
+- Add your images to assets/ (recommended names shown below). Replace image URLs if you host elsewhere.
+- Open any page in a browser. All pages link to each other by relative paths.
+
+Recommended asset file names (put inside /assets):
+- hero.jpg      (large hero image)
+- event1.jpg    (featured event banner)
+- event2.jpg
+- gallery1.jpg .. gallery8.jpg
+- logo.svg      (or logo.png)
+- bg-wave.svg    (decorative wave)
+
+Colors and fonts are easy to tweak in assets/style.css.
+
+-->
+
+<!-- ========================= index.html ========================= -->
+<!doctype html>
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ocean Events - Unforgettable Parties in Odesa</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>OCEAN | Party & Events — Odesa</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="overlay">
-            <h1>Ocean Events</h1>
-            <p>Unforgettable Parties & Events in Odesa</p>
-            <a href="#contact" class="btn">Book Now</a>
-        </div>
-    </header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><img src="assets/logo.svg" alt="OCEAN" class="logo">OCEAN</a>
+      <nav class="nav">
+        <a href="events.html">Events</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn btn-ghost">Contact</a>
+      </nav>
+      <a href="https://www.instagram.com/ocean.events.ua" target="_blank" class="ig">@ocean.events.ua</a>
+    </div>
+  </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We create unforgettable events and parties in Odesa, from weddings to corporate events. Our team handles every detail so you can enjoy the moment.</p>
+  <main>
+    <section class="hero">
+      <img src="assets/hero.jpg" alt="Ocean party" class="hero-bg">
+      <div class="container hero-content">
+        <h1>OCEAN — Вечірки, які запам'ятаються</h1>
+        <p class="lead">Клубні ночі, тематичні party та великі івенти в Одесі. Підписуйтесь в Instagram для свіжих фотозвітів та анонсів.</p>
+        <div class="hero-ctas">
+          <a href="events.html" class="btn btn-primary">Переглянути події</a>
+          <a href="contact.html" class="btn btn-outline">Забронювати столик</a>
+        </div>
+      </div>
+      <div class="hero-wave" aria-hidden="true"><img src="assets/bg-wave.svg" alt="wave"></div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-cards">
-            <div class="card">
-                <h3>Weddings</h3>
-                <p>Elegant, memorable, and stress-free wedding planning.</p>
+    <section class="upcoming container">
+      <h2>Найближчі події</h2>
+      <div class="grid events-grid">
+        <article class="card">
+          <img src="assets/event1.jpg" alt="Event 1">
+          <div class="card-body">
+            <h3>DISCOTEKA — 90s & 2000s</h3>
+            <p class="muted">6 вересня • Palladium Odesa</p>
+            <div class="card-actions">
+              <a href="events.html#discoteca" class="link">Деталі</a>
+              <a class="btn btn-sm" href="contact.html#book">Купити квиток</a>
             </div>
-            <div class="card">
-                <h3>Corporate Events</h3>
-                <p>Professional events that impress your clients and team.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/event2.jpg" alt="Event 2">
+          <div class="card-body">
+            <h3>LOVE PARTY</h3>
+            <p class="muted">8 лютого • OCEAN Hall</p>
+            <div class="card-actions">
+              <a href="events.html#loveparty" class="link">Деталі</a>
+              <a class="btn btn-sm" href="contact.html#book">Купити квиток</a>
             </div>
-            <div class="card">
-                <h3>Private Parties</h3>
-                <p>Fun, energetic parties customized to your taste.</p>
-            </div>
-        </div>
+          </div>
+        </article>
+
+        <article class="card card-cta">
+          <div class="card-body">
+            <h3>Організуйте власну вечірку</h3>
+            <p class="muted">Весілля, корпоративи, тематичні шоу — ми створимо вечір саме для вас.</p>
+            <a href="contact.html" class="btn">Запитати ціну</a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-grid">
-            <img src="https://via.placeholder.com/300x200" alt="Event 1">
-            <img src="https://via.placeholder.com/300x200" alt="Event 2">
-            <img src="https://via.placeholder.com/300x200" alt="Event 3">
-            <img src="https://via.placeholder.com/300x200" alt="Event 4">
-        </div>
+    <section class="gallery-preview container">
+      <h2>Знімки з останніх подій</h2>
+      <div class="masonry">
+        <!-- Replace these with actual Instagram export images -->
+        <img src="assets/gallery1.jpg" alt="gallery">
+        <img src="assets/gallery2.jpg" alt="gallery">
+        <img src="assets/gallery3.jpg" alt="gallery">
+        <img src="assets/gallery4.jpg" alt="gallery">
+      </div>
+      <p class="center"><a href="gallery.html" class="link">Переглянути всю галерею</a></p>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Message / Event Details" required></textarea>
-            <button type="submit">Send Message</button>
+    <section class="newsletter container">
+      <div class="card small">
+        <h3>Підписатись на анонси</h3>
+        <p class="muted">Отримуйте нові анонси подій в Instagram та у Viber/Telegram.</p>
+        <form action="#" class="subscribe">
+          <input type="email" placeholder="E-mail або телефон" required>
+          <button class="btn">Підписатись</button>
         </form>
-        <p>Or reach us on <a href="https://instagram.com/ocean.events.ua" target="_blank">Instagram</a></p>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Ocean Events. All rights reserved.</p>
-    </footer>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>OCEAN</strong>
+        <p class="muted">Клубні вечірки та приватні івенти • Одеса</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="events.html">Events</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="social">
+        <a href="https://www.instagram.com/ocean.events.ua" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
+
+
+<!-- ========================= events.html ========================= -->
