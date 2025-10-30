@@ -1,121 +1,97 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>OCEAN | Party & Events — Odesa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocean Events | Організація Подій</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand"><img src="assets/logo.jpg" alt="OCEAN" class="logo">OCEAN</a>
-      <nav class="nav">
-        <a href="events.html">Events</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="btn btn-ghost">Contact</a>
-      </nav>
-      <a href="https://www.instagram.com/ocean.events.ua" target="_blank" class="ig">@ocean.events.ua</a>
-    </div>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <img src="logo.svg" alt="Ocean Events Logo">
+      <div class="nav-links">
+        <a href="index.html">Головна</a>
+        <a href="events.html">Події</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="about.html">Про нас</a>
+        <a href="contact.html">Контакти</a>
+      </div>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <img src="assets/hero.jpg" alt="Ocean party" class="hero-bg">
-      <div class="container hero-content">
-        <h1>OCEAN — Вечірки, які запам'ятаються</h1>
-        <p class="lead">Клубні ночі, тематичні party та великі івенти в Одесі. Підписуйтесь в Instagram для свіжих фотозвітів та анонсів.</p>
-        <div class="hero-ctas">
-          <a href="events.html" class="btn btn-primary">Переглянути події</a>
-          <a href="contact.html" class="btn btn-outline">Забронювати столик</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Найкращі моменти починаються тут</h1>
+      <p>Ми створюємо події, які залишають спогади на все життя</p>
+      <a href="events.html" class="btn">Переглянути події</a>
+    </div>
+  </section>
+
+  <!-- Upcoming Events -->
+  <section class="events">
+    <h2 class="section-title">Найближчі Події</h2>
+    <div class="events-grid">
+      <div class="event-card">
+        <img src="p1.jpg" alt="Event 1">
+        <div class="event-card-content">
+          <h3>Summer Ocean Party</h3>
+          <p>12 Серпня 2025 | Beach Club Uzhhorod</p>
+          <a href="events.html" class="btn">Детальніше</a>
         </div>
       </div>
-      <div class="hero-wave" aria-hidden="true"><img src="assets/bg-wave.svg" alt="wave"></div>
-    </section>
 
-    <section class="upcoming container">
-      <h2>Найближчі події</h2>
-      <div class="grid events-grid">
-        <article class="card">
-          <img src="assets/event1.jpg" alt="Event 1">
-          <div class="card-body">
-            <h3>DISCOTEKA — 90s & 2000s</h3>
-            <p class="muted">6 вересня • Palladium Odesa</p>
-            <div class="card-actions">
-              <a href="events.html#discoteca" class="link">Деталі</a>
-              <a class="btn btn-sm" href="contact.html#book">Купити квиток</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="assets/event2.jpg" alt="Event 2">
-          <div class="card-body">
-            <h3>LOVE PARTY</h3>
-            <p class="muted">8 лютого • OCEAN Hall</p>
-            <div class="card-actions">
-              <a href="events.html#loveparty" class="link">Деталі</a>
-              <a class="btn btn-sm" href="contact.html#book">Купити квиток</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card card-cta">
-          <div class="card-body">
-            <h3>Організуйте власну вечірку</h3>
-            <p class="muted">Весілля, корпоративи, тематичні шоу — ми створимо вечір саме для вас.</p>
-            <a href="contact.html" class="btn">Запитати ціну</a>
-          </div>
-        </article>
+      <div class="event-card">
+        <img src="p2.jpg" alt="Event 2">
+        <div class="event-card-content">
+          <h3>Luxury Wedding Showcase</h3>
+          <p>28 Вересня 2025 | Sky Hall Kyiv</p>
+          <a href="events.html" class="btn">Детальніше</a>
+        </div>
       </div>
-    </section>
 
-    <section class="gallery-preview container">
-      <h2>Знімки з останніх подій</h2>
-      <div class="masonry">
-        <!-- Replace these with actual Instagram export images -->
-        <img src="assets/gallery1.jpg" alt="gallery">
-        <img src="assets/gallery2.jpg" alt="gallery">
-        <img src="assets/gallery3.jpg" alt="gallery">
-        <img src="assets/gallery4.jpg" alt="gallery">
-      </div>
-      <p class="center"><a href="gallery.html" class="link">Переглянути всю галерею</a></p>
-    </section>
-
-    <section class="newsletter container">
-      <div class="card small">
-        <h3>Підписатись на анонси</h3>
-        <p class="muted">Отримуйте нові анонси подій в Instagram та у Viber/Telegram.</p>
-        <form action="#" class="subscribe">
-          <input type="email" placeholder="E-mail або телефон" required>
-          <button class="btn">Підписатись</button>
-        </form>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <strong>OCEAN</strong>
-        <p class="muted">Клубні вечірки та приватні івенти • Одеса</p>
-      </div>
-      <nav class="footer-nav">
-        <a href="events.html">Events</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="social">
-        <a href="https://www.instagram.com/ocean.events.ua" target="_blank">Instagram</a>
+      <div class="event-card">
+        <img src="p3.jpg" alt="Event 3">
+        <div class="event-card-content">
+          <h3>Charity Gala Night</h3>
+          <p>15 Жовтня 2025 | Premier Palace Hotel</p>
+          <a href="events.html" class="btn">Детальніше</a>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- Gallery Preview -->
+  <section class="gallery-preview">
+    <h2 class="section-title">Галерея Миттєвостей</h2>
+    <div class="gallery">
+      <img src="pic1.jpg" alt="Gallery Image 1">
+      <img src="pic2.jpg" alt="Gallery Image 2">
+      <img src="pic3.jpg" alt="Gallery Image 3">
+      <img src="pic4.jpg" alt="Gallery Image 4">
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="gallery.html" class="btn">Переглянути більше</a>
+    </div>
+  </section>
+
+  <!-- Newsletter / CTA -->
+  <section class="newsletter">
+    <h2 class="section-title">Будь у курсі нових подій</h2>
+    <form action="#">
+      <input type="email" placeholder="Введіть вашу електронну адресу" required>
+      <button type="submit">Підписатися</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Ocean Events. Всі права захищені.</p>
   </footer>
+
 </body>
 </html>
-
-
